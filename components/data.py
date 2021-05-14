@@ -1,17 +1,31 @@
+""" FA_Nima Beygi: Identification and mapping of photovoltaic (PV) systems on 
+satellite images using deep learning and implementing a Deep convolution neural 
+networks for semantic segmentation
+
+data preprocessing
+"""
+
+
+"""
+Reference:
+https://github.com/zhixuhao/unet
+
+"""
+
 from __future__ import print_function
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-#from keras.preprocessing.image import ImageDataGenerator  ###
+#from keras.preprocessing.image import ImageDataGenerator  
 import numpy as np
 import os
 import glob
 import skimage.io as io
 import skimage.transform as trans
-from skimage import img_as_ubyte  # Neu
+from skimage import img_as_ubyte  
 from skimage import img_as_float
-#import tensorflow.compat.v1 as tf   ###
-#tf.disable_v2_behavior()            ###
+#import tensorflow.compat.v1 as tf   
+#tf.disable_v2_behavior()            
 #from tensorflow.keras import backend as k
-#from tensorflow.python.keras import backend as k ###
+#from tensorflow.python.keras import backend as k 
 
 
 Sky = [128, 128, 128]
@@ -96,8 +110,6 @@ def testGenerator(img_path, file, target_size=(256, 256), flag_multi_class=True,
                          ) if (not flag_multi_class) else img
     img = np.reshape(img, (1,)+img.shape)
     yield img
-        
-        
 
 
 def geneTrainNpy(image_path, mask_path, flag_multi_class=False, num_class=2, image_prefix="image", mask_prefix="mask", image_as_gray=False, mask_as_gray=True):
@@ -127,28 +139,6 @@ def labelVisualize(num_class, color_dict, img):
     return img_out / 255.
 
 
-# def saveResult(save_path,npyfile,flag_multi_class = False,num_class = 2):
-#    for i,item in enumerate(npyfile):
-#       if flag_multi_class:
-#            img = labelVisualize(num_class,COLOR_DICT,item)
-#        else:
-#            img=item[:,:,0]
-#            print(np.max(img),np.min(img))
-#            img[img>0.45]=1
-#            img[img<=0.45]=0
-#            print(np.max(img),np.min(img))
-#        #io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
-#        io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
-#        #io.imsave(os.path.join(save_path,"%d_predict.png"%i),img_as_ubyte(img))            #neu
-#        #io.imsave(os.path.join(save_path,"%d_predict.tif"%i),img_as_float(img))            #neu
-
-
-# def saveResult(save_path,npyfile,flag_multi_class = False,num_class = 2):
-#    for i,item in enumerate(npyfile):
-#        img = labelVisualize(num_class,COLOR_DICT,item) if flag_multi_class else item[:,:,0]
-#        #io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
-#        io.imsave(os.path.join(save_path,"%d_predict.png"%i),img_as_ubyte(img))            #neu
-
 def saveResult(save_path, npyfile, flag_multi_class=False, num_class=2):
     for i, item in enumerate(npyfile):
         if flag_multi_class:
@@ -160,8 +150,6 @@ def saveResult(save_path, npyfile, flag_multi_class=False, num_class=2):
             img[img <= 0.50] = 0
             print(np.max(img), np.min(img))
             io.imsave(os.path.join(save_path, "%d_predict.png" % i), img)
-            # io.imsave(os.path.join(save_path,"%d_predict.png"%i),img)
-            #io.imsave(os.path.join(save_path,"%d_predicted(7x_iou Met.Loss._0.01).png"%i),img_as_ubyte(img))
+            # io.imsave(os.path.join(save_path,"%d_predicted(7x_iou Met.Loss._0.01).png"%i),img_as_ubyte(img))
             # io.imsave(os.path.join(save_path,"%d_predict.tif"%i),img_as_float(img))
 
-            # io.imsave(os.path.join(save_path,"%d_predict.png"%i),img_as_ubyte(img))

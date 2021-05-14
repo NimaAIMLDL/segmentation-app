@@ -1,5 +1,11 @@
-# Data
-# Dash
+""" FA_Nima Beygi: Identification and mapping of photovoltaic (PV) systems on 
+satellite images using deep learning and implementing a Deep convolution neural 
+networks for semantic segmentation
+
+U-Net segmentation-app
+"""
+
+
 import base64
 import math
 import os

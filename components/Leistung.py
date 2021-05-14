@@ -1,4 +1,9 @@
-"""Michael Bauer Werkhof e.V., Schulze-Delitzsch-Straße, 70565 Stuttgart (160 Module)"""
+""" FA_Nima Beygi: Identification and mapping of photovoltaic (PV) systems on 
+satellite images using deep learning and implementing a Deep convolution neural 
+networks for semantic segmentation
+
+Calculation methodology (Leistung.py + app.py)
+"""
 
 import cv2
 import numpy as np

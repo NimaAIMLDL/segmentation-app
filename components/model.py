@@ -1,3 +1,18 @@
+""" FA_Nima Beygi: Identification and mapping of photovoltaic (PV) systems on 
+satellite images using deep learning and implementing a Deep convolution neural 
+networks for semantic segmentation
+
+U-Net
+"""
+
+
+"""
+Reference:
+https://github.com/zhixuhao/unet
+
+"""
+
+
 import numpy as np
 import os
 import skimage.io as io
