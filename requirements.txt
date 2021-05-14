@@ -6,7 +6,6 @@ Keras==2.4.2
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
 click==7.1.2
-dash
 dash-bootstrap-components==0.9.2
 dash-core-components==1.10.0
 dash-extra-ui-components==0.0.2
@@ -37,4 +36,3 @@ toolz==0.10.0
 uwsgi
 visdcc==0.0.40
 webassets
-werkzeug

@@ -8,6 +8,10 @@
 ![Dash](https://img.shields.io/badge/Dash-v1.18.0-blue.svg?longCache=true&logo=python&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Plotly](https://img.shields.io/badge/Plotly-v4.14.0-blue.svg?longCache=true&logo=python&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 
+## Demo 
+
+Go to [demo](https://segmentation-app-beygi.herokuapp.com/)
+
 ## Getting Started
 
 ```shell
