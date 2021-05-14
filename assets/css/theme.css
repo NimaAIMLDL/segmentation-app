@@ -1,0 +1,24 @@
+/* http://paletton.com/#uid=33k0s0kkOp0aRCCgftHo-l7tzg5 */
+
+
+:root {  
+    --primaryBg: #fff;
+    --secondaryBg: #f5f5f5;
+    --navColor: #2B7279;
+    --default: #232323;
+    --defaultInverse: #fff;
+    --primary: #2B7279;
+    --secondary: #203647;
+    --terciary: #12232E;
+  }
+  
+  :root[data-theme='dark'] {
+    --primaryBg: #232323;
+    --secondaryBg: #333;
+    --navColor: #333;
+    --default: #fff;
+    --defaultInverse: #232323;
+    --primary: #77AEB3;
+    --secondary: #4DA8DA;
+    --terciary: #007CC7;
+  }
