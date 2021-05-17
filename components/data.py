@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 """ FA_Nima Beygi: Identification and mapping of photovoltaic (PV) systems on 
 satellite images using deep learning and implementing a Deep convolution neural 
 networks for semantic segmentation
@@ -12,7 +14,7 @@ https://github.com/zhixuhao/unet
 
 """
 
-from __future__ import print_function
+
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 #from keras.preprocessing.image import ImageDataGenerator  
 import numpy as np
