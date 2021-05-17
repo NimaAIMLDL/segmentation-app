@@ -19,7 +19,7 @@ future==0.18.2
 gunicorn==20.0.4
 htexpr==0.0.5
 itsdangerous==1.1.0
-numpy==1.18.4
+numpy==1.19.2
 opencv-python
 pandas==1.0.3
 parsimonious==0.8.1
@@ -30,8 +30,8 @@ python-dotenv
 pytz==2020.1
 retrying==1.3.3
 scikit-image
-six==1.14.0
-tensorflow
+six==1.15.0
+tensorflow==2.4.0
 toolz==0.10.0
 uwsgi
 visdcc==0.0.40
